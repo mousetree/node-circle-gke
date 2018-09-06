@@ -13,7 +13,7 @@ const buildDate = process.env.APP_BUILD_DATE || new Date().toISOString()
 
 app.get('/', (req, res) => {
     const welcome = myLib.helloWorld()
-    const text = `${welcome}! We're at commit ${commitRef} which was built at ${buildDate}`
+    const text = `${welcome}! We're now at commit ${commitRef} which was built at ${buildDate}`
     res.send(text)
 })
 
